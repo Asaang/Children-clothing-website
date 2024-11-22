@@ -1,0 +1,296 @@
+/* Root Variables */
+:root {
+    --primary: #ff9800;
+    --secondary: rgba(15, 10, 29, 0.849);
+    --light: #2f3640;
+  }
+  
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+  /* Navbar Start */
+  header {
+    width: 100%;
+    background-color: var(--secondary);
+  }
+  
+  .nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+
+  /* Left Section */
+  .nav1 .left {
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 24px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Spacing between logo and text */
+  }
+  
+  .nav1 .left img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Center Section */
+  .nav1 .center ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav1 .center ul li {
+    position: relative;
+  }
+  
+  .nav1 .center ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .nav1 .center ul li a:hover {
+    color: var(--primary);
+  }
+  
+  .nav1 .center ul li a i {
+    margin-right: 5px;
+  }
+  
+  .nav1 .center ul li ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: var(--light);
+    border-radius: 4px;
+    display: none;
+    padding: 5px 0;
+    z-index: 1000;
+  }
+  
+  .nav1 .center ul li ul li {
+    width: 120px;
+  }
+  
+  .nav1 .center ul li ul li a {
+    padding: 8px 10px;
+  }
+  
+  .nav1 .center ul li:hover ul {
+    display: block;
+  }
+  
+  /* Right Section */
+  .nav1 .right a {
+    text-decoration: none;
+    color: var(--primary);
+    background-color: white;
+    border: 2px solid var(--primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav1 .right a:hover {
+    color: white;
+    background-color: var(--primary);
+  }
+/* navbar ends */
+
+/* ----------------------------------------------------------------------------------------------------------- */  
+/* Featured section */
+.featured {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to right,rgba(0,0,0,1) 20%,rgba(255,255,255,0.2)), url(images/Background.jpeg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.featured-text{
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+.featured-text button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  margin: 20px 0px;
+  color: white;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* New Arrival */
+
+/* Headding of new Arrival */
+.latest{
+  padding: 50px 100px;
+}
+
+.product-intro{
+  text-align: center;
+}
+
+.product-intro h1{
+  color: var(--primary);
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: bolder;
+
+}
+
+.product-intro h1 span{
+  color: var(--secondary);
+}
+
+.product-intro p{
+  color: gray;
+  margin: 15px 0;
+}
+
+/* Cards for new Arrival */
+
+.card-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin:  4rem 0;
+}
+
+.card-container .card{
+  flex-basis: 20%;
+  padding: 0.8rem;
+  position: relative;
+}
+
+.card img{
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.card i{
+  color: goldenrod;
+  margin: 10px 0;
+}
+
+.card button{
+  color: white;
+  background-color: var(--secondary);
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 5px 20px;
+}
+
+/* All Card Hove effect */
+
+.card:hover img, .card:hover h1{
+  width: 80%;
+  color: var(--primary);
+}
+
+/* discount tag on every card */
+.card::before{
+  content: '20% Off';
+  width: 25%;
+  height: 25px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: o;
+  background-color: var(--primary);
+  padding: 0 4px;
+  transform: rotate(-20deg);
+}
+
+/* New Arrival ends */
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Popular trend start */
+.trends{
+  padding: 50px 100px;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.trends .swiper {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+.trends .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 450px;
+}
+
+.trends .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Popular trend ends */
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* Footer */
+.footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary);
+    color: white;
+}
+
+.footer .right i {
+    font-size: 20px;
+    margin: 15px 0;
+    background-color: var(--primary);
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    margin-right: 15px;
+}
+
+.footer .center i{
+  margin-right: 5px;
+}
+.footer .right i:hover {
+    transform: rotate(360deg);
+}
